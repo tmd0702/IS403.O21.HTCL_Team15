@@ -402,6 +402,505 @@ Where: \\
     \indent\ \(X_t\) is the forecasted value at time t.\\
     \indent\ \(Y_t\) is the actual value at time t.\\
 
+\subsection{ETH/USDT dataset}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+         \hline
+         \multicolumn{6}{|c|}{\textbf{ETH/USDT Dataset's Evaluation}}\\
+         \hline
+         \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
+         \hline
+         \multirow{3}{*}{LN} & 7:3 & 9.64 & 0.5 & 16.2 & 0.5 \\ & 8:2 & 6.22 & 0.39 & 10.21 & 0.38 \\ & 9:1 & 5.29 & 0.3 & 8.79 & 0.3 \\ 
+         \hline
+         \multirow{3}{*}{ARIMA} & 7:3 & 1816.36 & 114.28 & 1929.15 & 94.27 \\ & 8:2 & 648.71 & 40.66 & 733.21 & 39.99 \\ & 9:1 & 195.5 & 11.23 & 233.49 & 10.98 \\
+         \hline
+         \multirow{3}{*}{RNN} & 7:3 & 110.39 & 32.2 & 278.97 & 528102.99 \\ & 8:2 & 8.85 & 16.92 & 14.12 & 173644.62 \\ & 9:1 & 7.01 & 8.19 & 11.45 & 43352.37 \\
+         \hline
+         \multirow{3}{*}{GRU} & 7:3 & 13.16 & 37.04 & 21.84 & 589466.33 \\ & 8:2 & 8.56 & 16.91 & 13.91 & 173362.42 \\ & 9:1 & 7.62 & 8.22 & 12.58 & 43531.89 \\
+         \hline
+         \multirow{3}{*}{LSTM} & 7:3 & 1069.41 & 50.96 & 1265.76 & 898561.82 \\ & 8:2 & 556.92 & 32.84 & 603.36 & 369742.78 \\ & 9:1 & 672.32 & 37.39 & 684.59 & 202655.56 \\
+         \hline
+         \multirow{3}{*}{H-W} & 7:3 & 1467.21 & 91.67 & 1586.94 & 76.15 \\ & 8:2 & 348.71 & 24.16 & 449.48 & 21.5 \\ & 9:1 & 102.24 & 5.68 & 126.9 & 5.74 \\
+         \hline
+         \multirow{3}{*}{SES} & 7:3 & 1810.48 & 113.93 & 1923.3 & 93.96 \\ & 8:2 & 269.55 & 16.0 & 304.35 & 16.62 \\ & 9:1 & 247.71 & 13.47 & 277.53 & 13.91 \\
+         \hline
+         \multirow{3}{*}{ResCNN} & 7:3 & 47.77 & 35.57 & 55.95 & 571812.03 \\ & 8:2 & 33.85 & 16.92 & 38.49 & 171478.42 \\ & 9:1 & 66.47 & 8.58 & 67.62 & 46335.52 \\
+         \hline
+    \end{tabular}
+    \caption{ETH/USDT Dataset's Evaluation}
+    \label{ethresult}
+\end{table}
+
+\subsection{BNB/USDT dataset}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+         \hline
+         \multicolumn{6}{|c|}{\textbf{BNB/USDT Dataset's Evaluation}}\\
+         \hline
+         \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
+         \hline
+         \multirow{3}{*}{LN} & 7:3 & 1.4 & 0.468 & 2.3 & 0.47 \\ & 8:2 & 1.04 & 0.37 & 1.79 & 0.38 \\ & 9:1 & 0.78 & 0.29 & 1.31 & 0.3 \\ 
+         \hline
+         \multirow{3}{*}{ARIMA} & 7:3 & 154.12 & 57.92 & 51. & 954.27 \\ & 8:2 & 49.58 & 20.31 & 61.31 & 17.99 \\ & 9:1 & 69.63 & 30.19 & 82.78 & 26.5 \\
+         \hline
+         \multirow{3}{*}{RNN} & 7:3 & 1.9 & 23.9 & 3.14 & 366618.78 \\ & 8:2 & 1.48 & 16.58 & 2.46 & 166101.01 \\ & 9:1 & 1.14 & 19.44 & 1.77 & 99967.0 \\
+         \hline
+         \multirow{3}{*}{GRU} & 7:3 & 1.94 & 23.85 & 3.1 & 365947.57 \\ & 8:2 & 1.4 & 16.6 & 2.36 & 166489.09 \\ & 9:1 & 0.99 & 19.4 & 1.66 & 99679.88 \\
+         \hline
+         \multirow{3}{*}{LSTM} & 7:3 & 3.12 & 23.64 & 4.12 & 363696.82 \\ & 8:2 & 1.52 & 16.47 & 2.41 & 165207.55 \\ & 9:1 & 1.2 & 19.38 & 1.79 & 99575.8 \\
+         \hline
+         \multirow{3}{*}{H-W} & 7:3 & 150.16 & 56.7 & 163.51 & 50.17 \\ & 8:2 & 54.97 & 22.27 & 65.51 & 19.95 \\ & 9:1 & 62.5 & 27.09 & 74.85 & 23.79 \\
+         \hline
+         \multirow{3}{*}{SES} & 7:3 & 154.73 & 58.13 & 166.61 & 51.7 \\ & 8:2 & 49.73 & 20.37 & 61.46 & 18.05 \\ & 9:1 & 69.7 & 30.21 & 82.84 & 26.53 \\
+         \hline
+         \multirow{3}{*}{ResCNN} & 7:3 & 3.43 & 23.63 & 4.55 & 363922.55 \\ & 8:2 & 5.31 & 16.24 & 6.33 & 161119.93 \\ & 9:1 & 2.74 & 20.08 & 3.56 & 102969.8 \\
+         \hline
+    \end{tabular}
+    \caption{BNB/USDT Dataset's Evaluation}
+    \label{bnbresult}
+\end{table}
+
+\subsection{BTC/USDT dataset}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+         \hline
+         \multicolumn{6}{|c|}{\textbf{BTC/USDT Dataset's Evaluation}}\\
+         \hline
+         \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
+         \hline
+         \multirow{3}{*}{LN} & 7:3 & 108.92 & 0.38 & 183.96 & 0.39 \\ & 8:2 & 72.26 & 0.3 & 121.32 & 0.3 \\ & 9:1 & 75.74 & 0.27 & 127.91 & 0.27 \\ 
+         \hline
+         \multirow{3}{*}{ARIMA} & 7:3 & 18059.34 & 79.01 & 19761.85 & 65.0 \\ & 8:2 & 3967.76 & 17.64 & 4475.3 & 16.56 \\ & 9:1 & 7382.68 & 26.2 & 7585.2 & 26.5 \\
+         \hline
+         \multirow{3}{*}{RNN} & 7:3 & 24827.29 & 88.54 & 26190.24 & 1432664.8 \\ & 8:2 & 20609.45 & 85.45 & 21089.34 & 917441.78 \\ & 9:1 & 24111.88 & 86.39 & 24170.33 & 460041.74 \\
+         \hline
+         \multirow{3}{*}{GRU} & 7:3 & 20378.94 & 71.13 & 22018.97 & 1175971.3 \\ & 8:2 & 15494.2 & 63.27 & 16127.03 & 689733.47 \\ & 9:1 & 18341.77 & 65.63 & 18418.54 & 349951.25 \\
+         \hline
+         \multirow{3}{*}{LSTM} & 7:3 & 24827.04 & 88.54 & 26190.0 & 1432650.45 \\ & 8:2 & 20613.37 & 85.46 & 21093.17 & 917616.28 \\ & 9:1 & 24108.94 & 86.38 & 24167.39 & 459985.66 \\
+         \hline
+         \multirow{3}{*}{H-W} & 7:3 & 15982.5 & 69.87 & 17628.13 & 57.52 \\ & 8:2 & 6403.99 & 32.02 & 8381.68 & 26.72 \\ & 9:1 & 3341.99 & 11.8 & 3735.0 & 12.0 \\
+         \hline
+         \multirow{3}{*}{SES} & 7:3 & 18096.64 & 79.16 & 19798.3 & 65.13 \\ & 8:2 & 3967.98 & 17.64 & 4475.47 & 16.56 \\ & 9:1 & 7368.54 & 26.15 & 7571.24 & 26.45 \\
+         \hline
+         \multirow{3}{*}{ResCNN} & 7:3 & 612.77 & 35.35 & 696.08 & 539787.02 \\ & 8:2 & 1076.33 & 20.36 & 1275.25 & 207298.72 \\ & 9:1 & 338.71 & 7.62 & 428.5 & 40302.1 \\
+         \hline
+    \end{tabular}
+    \caption{BTC/USDT Dataset's Evaluation}
+    \label{btcresult}
+\end{table}
+
+\subsection{Model's result}
+\subsubsection{Linear Regression}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Linear Regression/Linear Regression BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of Linear Regression model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{ARIMA}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ARIMA/ARIMA BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of ARIMA model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{RNN}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of RNN model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{GRU}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/GRU/GRU BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of GRU model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{LSTM}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/LSTM/LSTM BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of LSTM model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{Holt - Winters}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/Holt Winters/Holt Winters BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of Holt - Winters model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{SES}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/SES/SES BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of SES model}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{ResCNN}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/RNN/RNN ETH_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN ETH_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN ETH_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BNB_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BNB_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BNB_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \centering
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BTC_USDT Price Prediction 7-3.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BTC_USDT Price Prediction 8-2.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.15\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{bibliography/ResCNN/ResCNN BTC_USDT Price Prediction 9-1.png}
+    \end{minipage}
+    \caption{The result of ResCNN model}
+    \label{fig:enter-label}
+\end{figure}
+
 \section{Conclusion}
 \subsection{Summary}
 
