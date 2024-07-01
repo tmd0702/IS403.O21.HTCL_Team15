@@ -29,7 +29,7 @@
 \address[3]{Faculty of Information Systems, University of Information Technology, (e-mail: 21522395@gm.uit.edu.vn)}
 
 \begin{abstract}
-The volatility and unpredictability of cryptocurrency markets pose significant challenges for investors and analysts alike. In this paper, we explore the application of time series analysis techniques to predict cryptocurrency prices. With a focus on three major cryptocurrencies: ETH/USDT, BNB/USDT and BTC/USDT, we apply Linear Regresstion (LR), ARIMA, RNN, GRU, LSTM, Holt-Winters, SES, ResCNN models to predict cryptocurrency prices. In addition, we utilize three evaluation metrics MAE, MAPE, RMSE and WAPE to assess the performance of models and identify which ones yield the best results. We also employ the Adam optimization algorithm to enhance the training efficiency and convergence speed of our predictive models, thereby optimizing the accuracy of cryptocurrency price forecasts across various time series analysis techniques.
+The volatility and unpredictability of cryptocurrency markets pose significant challenges for investors and analysts alike. In this paper, we explore the application of time series analysis techniques to predict cryptocurrency prices. With a focus on three major cryptocurrencies: ETH/USDT, BNB/USDT and BTC/USDT, we apply Linear Regresstion (LR), ARIMA, RNN, GRU, LSTM, Holt-Winters, SES, ResCNN models to predict cryptocurrency prices. In addition, we utilize four evaluation metrics MAE, MAPE, RMSE and WAPE to assess the performance of models and identify which ones yield the best results. We also employ the Adam optimization algorithm to enhance the training efficiency and convergence speed of our predictive models, thereby optimizing the accuracy of cryptocurrency price forecasts across various time series analysis techniques.
 \end{abstract}
 
 \begin{keywords}
@@ -44,7 +44,7 @@ Cryptocurrency, prediction, time series analysis
 \label{sec:introduction}
 Cryptocurrency, a revolutionary digital asset class, has gained significant attention since the emergence of Bitcoin (BTC) in 2009, challenging traditional notions of currency and investment. The main challenge is predicting the future prices of cryptocurrencies like Ethereum (ETH/USDT), Binance Coin (BNB/USDT) and Bitcoin (BTC/USDT) due to their volatile and complex market nature.\\
 Accurate forecasting offers substantial opportunities for investors and analysts, including increasing revenue through timely buy/sell decisions, attracting more users to trading platforms with valuable predictions, and potentially driving up Bitcoin's price through informed investment strategies.\\
-This report explores time series analysis techniques on historical price data from the past 24 hours to predict prices for the next 24 hours, utilizing models such as Linear Regresstion (LR), Autoregressive Integrated Moving Average (ARIMA), Recurrent Neural Network (RNN), Gated Recurrent Unit (GRU), Long Short-Term Memory (LSTM), Holt-Winters, Simple Exponential Smoothing (SES) and ResCNN. By leveraging these models, the study aims to provide insights for navigating the dynamic cryptocurrency markets. Evaluation metrics like Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Root Mean Square Error (RMSE), and Weighted Absolute Percentage Error (WAPE) are used to compare model performance and identify the most suitable approach for reliable predictions.
+This report explores time series analysis techniques on historical price data from the past 24 hours to predict prices for the next 1 hour, utilizing models such as Linear Regresstion (LR), Autoregressive Integrated Moving Average (ARIMA), Recurrent Neural Network (RNN), Gated Recurrent Unit (GRU), Long Short-Term Memory (LSTM), Holt-Winters, Simple Exponential Smoothing (SES) and ResCNN. By leveraging these models, the study aims to provide insights for navigating the dynamic cryptocurrency markets. Evaluation metrics like Mean Absolute Error (MAE), Mean Absolute Percentage Error (MAPE), Root Mean Square Error (RMSE), and Weighted Absolute Percentage Error (WAPE) are used to compare model performance and identify the most suitable approach for reliable predictions.
 
 \section{Related Works}
 Predicting cryptocurrency prices has garnered considerable attention due to the market's high volatility and potential for significant financial gains. Various methodologies have been explored, ranging from traditional statistical models to sophisticated machine learning and deep learning techniques.\\
@@ -411,7 +411,7 @@ Where: \\
          \hline
          \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
          \hline
-         \multirow{3}{*}{LN} & 7:3 & 9.64 & 0.5 & 16.2 & 0.5 \\ & 8:2 & 6.22 & 0.39 & 10.21 & 0.38 \\ & 9:1 & 5.29 & 0.3 & 8.79 & 0.3 \\ 
+         \multirow{3}{*}{LN} & \textbf{7:3} & \textbf{9.64} & \textbf{0.5} & \textbf{16.2} & \textbf{0.5} \\ & \textbf{8:2} & \textbf{6.22} & \textbf{0.39} & \textbf{10.21} & \textbf{0.38} \\ & \textbf{9:1} & \textbf{5.29} & \textbf{0.3} & \textbf{8.79} & \textbf{0.3} \\ 
          \hline
          \multirow{3}{*}{ARIMA} & 7:3 & 1816.36 & 114.28 & 1929.15 & 94.27 \\ & 8:2 & 648.71 & 40.66 & 733.21 & 39.99 \\ & 9:1 & 195.5 & 11.23 & 233.49 & 10.98 \\
          \hline
@@ -441,7 +441,7 @@ Where: \\
          \hline
          \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
          \hline
-         \multirow{3}{*}{LN} & 7:3 & 1.4 & 0.468 & 2.3 & 0.47 \\ & 8:2 & 1.04 & 0.37 & 1.79 & 0.38 \\ & 9:1 & 0.78 & 0.29 & 1.31 & 0.3 \\ 
+         \multirow{3}{*}{LN} & \textbf{7:3} & \textbf{1.4} & \textbf{0.468} & \textbf{2.3} & \textbf{0.47} \\ & \textbf{8:2} & \textbf{1.04} & \textbf{0.37} & \textbf{1.79} & \textbf{0.38} \\ & \textbf{9:1} & \textbf{0.78} & \textbf{0.29} & \textbf{1.31} & \textbf{0.3} \\ 
          \hline
          \multirow{3}{*}{ARIMA} & 7:3 & 154.12 & 57.92 & 51. & 954.27 \\ & 8:2 & 49.58 & 20.31 & 61.31 & 17.99 \\ & 9:1 & 69.63 & 30.19 & 82.78 & 26.5 \\
          \hline
@@ -471,7 +471,7 @@ Where: \\
          \hline
          \centering Model & Train:Test & MAE & MAPE & RMSE & WAPE \\ 
          \hline
-         \multirow{3}{*}{LN} & 7:3 & 108.92 & 0.38 & 183.96 & 0.39 \\ & 8:2 & 72.26 & 0.3 & 121.32 & 0.3 \\ & 9:1 & 75.74 & 0.27 & 127.91 & 0.27 \\ 
+         \multirow{3}{*}{LN} & \textbf{7:3} & \textbf{108.92} & \textbf{0.38} & \textbf{183.96} & \textbf{0.39} \\ & \textbf{8:2} & \textbf{72.26} & \textbf{0.3} & \textbf{121.32} & \textbf{0.3} \\ & \textbf{9:1} & \textbf{75.74} & \textbf{0.27} & \textbf{127.91} & \textbf{0.27} \\ 
          \hline
          \multirow{3}{*}{ARIMA} & 7:3 & 18059.34 & 79.01 & 19761.85 & 65.0 \\ & 8:2 & 3967.76 & 17.64 & 4475.3 & 16.56 \\ & 9:1 & 7382.68 & 26.2 & 7585.2 & 26.5 \\
          \hline
@@ -903,7 +903,7 @@ Where: \\
 
 \section{Conclusion}
 \subsection{Summary}
-
+This study assessed eight models—Linear Regression, GRU, SES, Holt-Winters, LSTM, RNN, ARIMA, and ResCNN—for forecasting BNB/USDT, ETH/USDT, and BTC/USDT prices over 30, 60, and 90 days using train-test splits of 7:3, 8:2, and 9:1. Linear Regression consistently outperformed other models in MAE, MAPE, RMSE, and WAPE metrics, indicating strong predictive capability. In contrast, more complex models such as GRU, LSTM, and RNN showed higher error rates, likely due to the volatility of cryptocurrency prices. Simple smoothing techniques like SES and Holt-Winters performed inadequately for this task. ResCNN and ARIMA yielded mixed results but generally performed worse than Linear Regression. In conclusion, while complex models show promise, traditional methods like Linear Regression currently offer more dependable predictions for cryptocurrency prices. Future research should explore hybrid approaches to enhance prediction accuracy and reliability.\\
 
 \subsection{Future Considerations}
 In our future research, it is essential to focus on further refining the previously discussed models. This optimization should specifically aim to:\\
