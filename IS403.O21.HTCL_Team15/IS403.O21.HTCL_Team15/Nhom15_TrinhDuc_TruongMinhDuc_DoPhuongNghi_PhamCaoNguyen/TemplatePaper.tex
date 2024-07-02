@@ -386,11 +386,11 @@ This allows the network to learn the residual mapping, or the difference between
 \textbf{Mean Absolute Error} (MAE) \cite{b11}: is a metric used to evaluate the average absolute difference between predicted values and actual values.\\
     \[MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|\]
 \textbf{Mean Absolute Percentage Error} (MAPE) \cite{b11}: is the average percentage error in a set of predicted values.\\
-    \[MAPE=\frac{100\%}{n}  \sum_{i=1}^{n} |y_i-\hat{y_i} |  = 1 \]
+    \[MAPE=\frac{1}{n}  \sum_{i=1}^{n} |\frac{y_i - \hat{y}_i}{y_i}| \times 100\% \]
 \textbf{Root Mean Squared Error} (RMSE) \cite{b11}: is the square root of average value of squared error in a set of predicted values.\\
-    \[RMSE=\sqrt{\sum_{i=1}^{n} \frac{(\hat{y_i}-y_i )^2}{n} }\]
+    \[RMSE= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{y_i}-y_i )^2} \]
 \textbf{Weighted Absolute Percentage Error} (WAPE) \cite{b11}: measures the weighted average of absolute percentage errors between predicted and actual values.\\
-    \[WAPE = \frac{1}{\sum_{i=1}^{n} w_i} \sum_{i=1}^{n} w_i \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100\%\]
+    \[WAPE = \frac{{\sum_{i=1}^{n}} {|y_i - \hat{y}_i}|}{\sum_{i=1}^{n} |y_i|} \times 100\%\]
 Where: \\
     \indent\ \(N\) is number of time series (number of items) in the dataset.\\
     \indent\ \(H\) is length of the forecast horizon (prediction\_length).\\
